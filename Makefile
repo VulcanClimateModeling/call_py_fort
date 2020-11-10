@@ -19,7 +19,7 @@ clean:
 	${RM} -r build
 
 check: all
-	make -C test test
+	make -C build test
 
 build:
 	mkdir -p $@
