@@ -1,7 +1,7 @@
 on: push
 name: Check
 jobs:
-  kubeval:
+  build:
     runs-on: ubuntu-latest
     env:
       F90: gfortran
