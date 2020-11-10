@@ -9,9 +9,9 @@ jobs:
       PFUNIT: /usr/local
     steps:
       - uses: actions/checkout@master
-      - name: install pfunit
+      - name: install dependencies
         run: |
-          apt-get update && \
+          sudo apt-get update && \
               DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata && \
               apt-get install -y  --no-install-recommends \
               cmake \
@@ -29,6 +29,6 @@ jobs:
           cd pFUnit-3.2.9 && \
               cmake . && \
               make &&\
-              make install INSTALL_DIR=${PFUNIT}
-
-          make check
+              sudo make install INSTALL_DIR=${PFUNIT}
+      - name: build and test
+        run: make check
