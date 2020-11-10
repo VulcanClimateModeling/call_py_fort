@@ -31,4 +31,4 @@ jobs:
               make &&\
               sudo make install INSTALL_DIR=${PFUNIT}
       - name: build and test
-        run: make check
+        run: VERBOSE=1 make check
