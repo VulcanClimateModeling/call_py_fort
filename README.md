@@ -22,6 +22,8 @@ To install pfunit on a linux system, you can run a commmand like the following:
 
 Installing python dependencies is out of scope of this documentation.
 
+See the [continuous integration configuration](.github/workflows/check.yaml) for an example of how to install all these dependencies on an ubuntu system
+
 Once the dependencies are installed, you can compile and install this library using
 
     mkdir build
