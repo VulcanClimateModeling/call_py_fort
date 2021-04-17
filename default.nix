@@ -25,4 +25,8 @@ stdenv.mkDerivation {
     '';
     inherit pfunit;
 
+    shellHook = ''
+      export PYTHONPATH=$(pwd)/test:$PYTHONPATH
+    '';
+
 }
